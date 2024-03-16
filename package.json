@@ -1,13 +1,13 @@
 {
   "name": "yml-ts-cdk",
   "version": "0.1.0",
-  "bin": {
-    "yml-ts-cdk": "bin/yml-ts-cdk.js"
-  },
   "scripts": {
+    "clean": "rm -rf dist",
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
+    "pre:deploy": "npm run test && npm run build",
+    "deploy": "npx cdk deploy",
     "cdk": "cdk"
   },
   "devDependencies": {

@@ -14,6 +14,9 @@
 
     ## Added (tsconfig.json)
     outDir : "dist" ## Added
+    ...
+    "exclude": ["node_modules", "cdk.out", "dist/**/*"]
+
 ```
 
 ## Useful Commands
