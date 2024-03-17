@@ -6,7 +6,7 @@ const PROJECT_NAME = 'dev'
 const ENVIRONEMTNS = 'dev-test'
 
 const app = new cdk.App()
-new DefaultVPC(app, {
+const vpc = new DefaultVPC(app, {
   projectName: PROJECT_NAME,
   resourceName: 'vpc',
   environments: ENVIRONEMTNS,
