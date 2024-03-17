@@ -1,0 +1,5 @@
+common:
+  projectName: dev-test
+  resourceName: vpc
+  profile: root
+  region: ap-northeast-2

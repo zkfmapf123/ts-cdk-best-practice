@@ -2,14 +2,13 @@
   "name": "yml-ts-cdk",
   "version": "0.1.0",
   "scripts": {
+    "cli:init": "rm -rf agent && cd cli && make build",
     "clean": "rm -rf dist",
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
     "pre:deploy": "npm run clean &&npm run test && npm run build",
-    "cli": "node cli.js",
-    "deploy": "npx cdk deploy",
-    "cdk": "cdk"
+    "cli" : "./agent"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",

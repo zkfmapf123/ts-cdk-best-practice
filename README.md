@@ -28,6 +28,15 @@ exclude: ["node_modules", "cdk.out", "dist/**/*"]
 
 5. package.json 수정 + CLI 환경으로 수정
 
+## CLI 구성
+
+```sh
+    ## Go Module 구성 (Optional)
+    cd cli && go mod init [...]
+
+    ## Project Path
+    npm run cli:init
+```
 
 ## Useful Commands
 
