@@ -1,23 +1,33 @@
 # YML-TS-Init
 
-## 초기설정
+## Project 설정 (기존 CDK 에서 수정한 부분)
 
-> Project 설정
+1. .vscode 추가, .prettierrc 추가
+2. Folder Naming 변경
+
+    - lib -> stacks
+    - bin -> apps
+3. cdk.json 수정
 
 ```sh
-    ## Folder Naming 수정
-    lib -> stacks
-    bin -> apps
+## Before
+"app": "npx ts-node --prefer-ts-exts bin/yml-ts-cdk.ts"
 
-    ## Update (cdk.json)
-    "app": "npx ts-node --prefer-ts-exts bin/yml-ts-cdk.ts" >> "app": "npx ts-node --prefer-ts-exts apps/yml-ts-cdk.ts",
-
-    ## Added (tsconfig.json)
-    outDir : "dist" ## Added
-    ...
-    "exclude": ["node_modules", "cdk.out", "dist/**/*"]
-
+## After
+"app": "npx ts-node --prefer-ts-exts apps/yml-ts-cdk.ts"
 ```
+
+4. tsconfig.json 추가
+
+```sh
+## Update
+outDir : "dist"
+...
+exclude: ["node_modules", "cdk.out", "dist/**/*"]
+```
+
+5. package.json 수정 + CLI 환경으로 수정
+
 
 ## Useful Commands
 
