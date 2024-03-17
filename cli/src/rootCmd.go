@@ -48,7 +48,10 @@ var (
 			}
 
 			// Confirm
-			fullCommand := []string{"cdk", task, "--app", app, "--profile", config.Common.Profile, "--region", config.Common.Region}
+			// never : 사용자 승인이 필요하지 않은 상태
+			// any-change : 변경사항이 발생했을 경우
+			// broadening : 스택의 범위를 확장하는 경우
+			fullCommand := []string{"cdk", task, "--app", app, "--profile", config.Common.Profile, "--region", config.Common.Region, "--require-approval", "any-change"}
 			executeCmd := SelectBox(fmt.Sprintf("%s를 진행하시겠습니까? (Enter)\nCDK Task : %s\nApp : %s\nProfile : %s\nRegion : %s\nCommand : %s", task, task, app, config.Common.Profile, config.Common.Region, strings.Join(fullCommand, " ")), []string{"1 (실행)", "2 (종료)"})
 
 			if strings.Contains(executeCmd, "1") {
