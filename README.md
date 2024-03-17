@@ -36,6 +36,9 @@ exclude: ["node_modules", "cdk.out", "dist/**/*"]
 
     ## Project Path
     npm run cli:init
+
+    ## CDK
+    npm run cli
 ```
 
 ## Useful Commands
