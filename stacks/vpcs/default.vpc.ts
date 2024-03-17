@@ -11,6 +11,7 @@ export class DefaultVPC extends BaseStack<Props> implements IStacks<Props, cdk.a
     super(scope, props)
 
     const vpc = this.createResource(props)
+
     this.setTagsMapping(props.tags)
       .setOutputs({
         vpcId: {

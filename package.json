@@ -4,11 +4,11 @@
   "scripts": {
     "cli:init": "rm -rf agent && cd cli && make build",
     "clean": "rm -rf dist",
-    "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "pre:deploy": "npm run clean &&npm run test && npm run build",
-    "cli" : "./agent"
+    "build": "npm run clean && npm run test && tsc",
+    "cli": "./agent",
+    "deploy:cli": "npm run build && npm run cli"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",

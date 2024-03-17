@@ -17,7 +17,6 @@ export interface IVPC {
  */
 export interface IStackVPC {
   cidr: string
-  region: string
   isExistNAT: boolean
   maxAzs: number // Default 2
   natLen: number
